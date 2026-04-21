@@ -46,9 +46,9 @@
   - Chemistry
   - Engineering
   - Research
-  - Detective
+  #- Detective
   - Salvage
-  - Security # NoooOoOo!! My HoPcurity!1
+  #- Security # NoooOoOo!! My HoPcurity!1
   - Brig
   - Lawyer # Lawyer is now part of the justice dept
   - Cargo
@@ -57,9 +57,8 @@
   - Orders
   - Surgery
   - Robotics
-  - Chapel
-  - GenpopEnter
-  - GenpopLeave
+  #- GenpopEnter
+  #- GenpopLeave
   - Mail
   - Psychologist
   - Paramedic
