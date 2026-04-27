@@ -181,6 +181,10 @@ namespace Content.Client.Canvas.Ui
                 _signature = ArtistSignature.Text;
                 OnSignature?.Invoke(_signature);
             };
+            
+            // Eraser button handler
+            EraserButton.OnPressed += _ => HandleColorSelected(Color.Transparent);
+            
             ColorSelector.OnColorChanged += HandleColorSelected;
             //FixPaintingCode();
             //PopulatePaintingGrid();
@@ -202,6 +206,14 @@ namespace Content.Client.Canvas.Ui
             _width = castState.Width;
             _artist = castState.Artist;
             //Logger.ErrorS("canvas", $"received update {_paintingCode}.");
+
+            // Update UI controls with new values
+            WidthSize.Value = _width;
+            WidthSizeLabel.Text = _width.ToString();
+            HeightSize.Value = _height;
+            HeightSizeLabel.Text = _height.ToString();
+            ArtistSignature.Text = _signature;
+            ColorPreview.ModulateSelfOverride = _color;
 
             PopulatePaintingGrid();
         }
@@ -241,7 +253,7 @@ namespace Content.Client.Canvas.Ui
 
             foreach (var color in colors)
             {
-                // Create a new BoxContainer every 10 colors
+                // Create a new BoxContainer every 6 colors (adjusted for better layout)
                 if (colorCount % 6 == 0)
                 {
                     // If colorGroup already exists, add it to the ColorSelector before starting a new one
@@ -250,7 +262,7 @@ namespace Content.Client.Canvas.Ui
                         ColorSelectorBox.AddChild(colorGroup);
                     }
 
-                    // Create a new BoxContainer for the next 10 colors
+                    // Create a new BoxContainer for the next 6 colors
                     colorGroup = new BoxContainer
                     {
                         Orientation = LayoutOrientation.Vertical,
@@ -280,20 +292,6 @@ namespace Content.Client.Canvas.Ui
             {
                 ColorSelectorBox.AddChild(colorGroup);
             }
-
-            // Add a button specifically for transparency
-            var transparencyButton = new Button
-            {
-                Text = "Eraser",
-                MinHeight = 30,
-                VerticalAlignment = Control.VAlignment.Top
-            };
-
-            // Attach an event to handle transparency selection
-            transparencyButton.OnPressed += _ => HandleColorSelected(Color.Transparent);
-
-            // Add the transparency button to the ColorSelector
-            ResolutionContainer.AddChild(transparencyButton);
         }
 
 
@@ -354,17 +352,22 @@ namespace Content.Client.Canvas.Ui
             // Clear any existing children in the Grids container
             Grids.RemoveAllChildren();
 
-            if (!string.IsNullOrEmpty(_artist))
+            // Hide/show controls based on whether canvas is finalized
+            bool isFinalized = !string.IsNullOrEmpty(_artist);
+            
+            // Find the left panel (controls) and right panel (canvas) to toggle visibility
+            // The main content is in a BoxContainer with Orientation="Horizontal"
+            // Index 0: Left panel (controls), Index 1: Separator, Index 2: Right panel (canvas)
+            if (Grids.Parent is BoxContainer mainPanel && mainPanel.ChildCount >= 3)
             {
-                ResolutionContainer.Visible = false;
-                HeaderColorPreview.Visible = false;
-                HeaderTools.Visible = false;
-            }
-            else
-            {
-                ResolutionContainer.Visible = true;
-                HeaderColorPreview.Visible = true;
-                HeaderTools.Visible = true;
+                var leftPanel = mainPanel.Children[0] as PanelContainer; // Controls panel
+                var rightPanel = mainPanel.Children[2] as PanelContainer; // Canvas panel
+    
+                if (leftPanel != null && rightPanel != null)
+                {
+                    leftPanel.Visible = !isFinalized;
+                    // Right panel (canvas) should always be visible
+                }
             }
 
             int index = 0; // Index to track the position in the painting code
@@ -440,9 +443,41 @@ namespace Content.Client.Canvas.Ui
                 var artistButton = new Button
                 {
                     Text = _artist,
-                    ModulateSelfOverride = Color.Black
+                    ModulateSelfOverride = Color.Black,
+                    HorizontalExpand = true,
+                    Margin = new Thickness(0, 4, 0, 0)
                 };
                 Grids.AddChild(artistButton);
+                
+                // Update status label if it exists
+                if (this.Parent is BoxContainer rootContainer && rootContainer.ChildCount >= 3)
+{
+    var statusPanel = rootContainer.Children[2] as PanelContainer; // Status bar panel
+    if (statusPanel != null)
+    {
+        var statusLabel = statusPanel.Children[0] as Label; // Status label
+        if (statusLabel != null)
+        {
+            statusLabel.Text = Loc.GetString("canvas-finalized", ("artist", _artist));
+        }
+    }
+}
+            }
+            else
+            {
+                // Update status label to ready state
+                if (this.Parent is BoxContainer rootContainer && rootContainer.ChildCount >= 3)
+{
+    var statusPanel = rootContainer.Children[2] as PanelContainer; // Status bar panel
+    if (statusPanel != null)
+    {
+        var statusLabel = statusPanel.Children[0] as Label; // Status label
+        if (statusLabel != null)
+        {
+            statusLabel.Text = Loc.GetString("canvas-ready");
+        }
+    }
+}
             }
         }
 
