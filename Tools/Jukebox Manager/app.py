@@ -77,6 +77,29 @@ def copy_ogg_to_resources(source_file: Path) -> None:
     update_attributions(file_name)
 
 
+def extract_file_name(item: dict[str, Any]) -> str | None:
+    path_value = item.get("path", {}).get("path")
+    if not isinstance(path_value, str):
+        return None
+    return Path(path_value).name or None
+
+
+def remove_attribution_entries(file_name: str) -> int:
+    attributions_data = load_yaml(ATTRIBUTIONS_PATH)
+    kept_entries: list[dict[str, Any]] = []
+    removed = 0
+    for entry in attributions_data:
+        files = entry.get("files", [])
+        if isinstance(files, list) and file_name in files:
+            removed += 1
+            continue
+        kept_entries.append(entry)
+
+    if removed:
+        save_yaml(ATTRIBUTIONS_PATH, kept_entries)
+    return removed
+
+
 def open_folder(path: Path) -> None:
     if path.exists():
         subprocess.Popen(["explorer", str(path)])
@@ -193,6 +216,7 @@ class JukeboxApp(App[None]):
 
     BINDINGS = [
         ("a", "add_files", "Add OGG"),
+        ("d", "remove_selected", "Remove Selected"),
         ("c", "open_catalog", "Open Catalog"),
         ("u", "open_audio", "Open Audio"),
         ("r", "refresh", "Refresh"),
@@ -210,6 +234,7 @@ class JukeboxApp(App[None]):
             yield ListView(id="jukebox-list")
             with Horizontal(id="controls"):
                 yield Button("Add OGG Files", id="add", variant="primary")
+                yield Button("Remove Selected", id="remove", variant="error")
                 yield Button("Open Catalog Folder", id="catalog")
                 yield Button("Open Audio Folder", id="audio")
                 yield Button("Refresh", id="refresh")
@@ -217,6 +242,7 @@ class JukeboxApp(App[None]):
         yield Footer()
 
     def on_mount(self) -> None:
+        self.catalog_items: list[dict[str, Any]] = []
         self.refresh_list()
 
     def refresh_list(self) -> None:
@@ -227,7 +253,8 @@ class JukeboxApp(App[None]):
             self.set_status(f"Catalog file not found: {CATALOG_PATH}")
             return
 
-        for item in load_yaml(CATALOG_PATH):
+        self.catalog_items = load_yaml(CATALOG_PATH)
+        for item in self.catalog_items:
             item_id = item.get("id", "unknown")
             item_name = item.get("name", "unknown")
             list_view.append(ListItem(Label(f"{item_id}: {item_name}")))
@@ -251,6 +278,35 @@ class JukeboxApp(App[None]):
     def action_add_files(self) -> None:
         self.push_screen(FileInputScreen(), self.process_add_input)
 
+    def action_remove_selected(self) -> None:
+        list_view = self.query_one("#jukebox-list", ListView)
+        selected_index = list_view.index
+        if selected_index is None or selected_index < 0 or selected_index >= len(self.catalog_items):
+            self.set_status("Select an item first.")
+            return
+
+        selected_item = self.catalog_items[selected_index]
+        file_name = extract_file_name(selected_item)
+        if not file_name:
+            self.set_status("Could not resolve file for selected entry.")
+            return
+
+        remaining = [item for i, item in enumerate(self.catalog_items) if i != selected_index]
+        save_yaml(CATALOG_PATH, remaining)
+
+        audio_file = AUDIO_DIR / file_name
+        deleted_audio = False
+        if audio_file.exists():
+            audio_file.unlink()
+            deleted_audio = True
+
+        removed_attributions = remove_attribution_entries(file_name)
+        self.refresh_list()
+        self.set_status(
+            f"Removed {file_name}. Audio deleted: {'yes' if deleted_audio else 'no'}. "
+            f"Attributions removed: {removed_attributions}."
+        )
+
     def on_paste(self, event: events.Paste) -> None:
         parsed = parse_ogg_paths(event.text)
         if any(path.suffix.lower() == ".ogg" for path in parsed):
@@ -264,6 +320,10 @@ class JukeboxApp(App[None]):
     @on(Button.Pressed, "#catalog")
     def on_catalog_pressed(self) -> None:
         self.action_open_catalog()
+
+    @on(Button.Pressed, "#remove")
+    def on_remove_pressed(self) -> None:
+        self.action_remove_selected()
 
     @on(Button.Pressed, "#audio")
     def on_audio_pressed(self) -> None:
