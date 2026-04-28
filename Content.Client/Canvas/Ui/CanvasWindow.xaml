@@ -7,7 +7,7 @@
                 MinSize="800 600">
     <BoxContainer Orientation="Vertical">
         <!-- Header Section -->
-        <PanelContainer>
+        <PanelContainer Name="HeaderPanel">
             <PanelContainer.PanelOverride>
                 <gfx:StyleBoxFlat BackgroundColor="#1e1e1e" />
             </PanelContainer.PanelOverride>
@@ -39,7 +39,7 @@
         <!-- Main Content -->
         <BoxContainer Orientation="Horizontal" Align="Begin" VerticalExpand="True">
             <!-- Left Panel: Controls -->
-            <PanelContainer>
+            <PanelContainer Name="LeftPanel">
                 <PanelContainer.PanelOverride>
                     <gfx:StyleBoxFlat BackgroundColor="#2a2a2a" />
                 </PanelContainer.PanelOverride>
