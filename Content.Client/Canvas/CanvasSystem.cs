@@ -266,7 +266,7 @@ namespace Content.Client.Canvas
                 }
 
                 _parent.UIUpdateNeeded = false;
-                _label.SetMarkup(Robust.Shared.Localization.Loc.GetString("Canvas-drawing-label",
+                _label.SetMarkup(Robust.Shared.Localization.Loc.GetString("canvas-drawing-label",
                     ("color", _parent.Color),
                     ("state", _parent.SelectedState),
                     ("paintingcode", _parent.PaintingCode),
