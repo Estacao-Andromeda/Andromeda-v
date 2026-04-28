@@ -1,0 +1,1 @@
+story-template-generic =  Aqui é { INDEFINITE($bookGenre) } { $bookGenre }  Sobre { INDEFINITE($char1Adj) } { $char1Adj } { $char1Type } e { INDEFINITE($char2Adj) } { $char2Adj } { $char2Type } Devido a { $event } Eles... { $actionTrait } { $action } { INDEFINITE($char3Type) } { $char3Type } { $location }O { $element } É { $elementTrait }.

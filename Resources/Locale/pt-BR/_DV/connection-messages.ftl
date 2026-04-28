@@ -1,0 +1,1 @@
+whitelist-not-whitelisted-peri =  Você não está na lista branca, para se tornar lista branca, se inscrever em nosso fórum, pode ser encontrado em #laboratórios da lista branca em nossa Discórdia em https://discord.gg/deltav

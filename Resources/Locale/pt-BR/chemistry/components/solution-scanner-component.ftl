@@ -1,0 +1,11 @@
+scannable-solution-verb-text =  Solução
+
+scannable-solution-verb-message =  Examine a composição química.
+
+scannable-solution-main-text =  Contém os seguintes produtos químicos:
+
+scannable-solution-empty-container =  Não contém produtos químicos.
+
+scannable-solution-chemical = - { $amount }U [color={ $color }]{ $type }[/color]
+
+scannable-solution-temperature =  Temperatura da solução: { $temperature }K.
