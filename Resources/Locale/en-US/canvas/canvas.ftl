@@ -13,5 +13,5 @@ canvas-artist-signature = Artist Signature
 canvas-color-controls = Color Controls
 canvas-eraser = Eraser
 canvas-ready = Ready
-canvas-finalized = Finalized by {artist}
+canvas-finalized = Finalized by {$artist}
 canvas-drawing-label = Canvas
