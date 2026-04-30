@@ -1,0 +1,6 @@
+pyyaml
+pydub
+mutagen
+textual
+textual-dev
+python-dotenv
