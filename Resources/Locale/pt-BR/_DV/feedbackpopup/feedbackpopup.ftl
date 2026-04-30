@@ -11,7 +11,7 @@ feedbackpopup-text-box-below =  Escreva seu feedback acima
 feedbackpopup-disclaimer =  Seu nome de usuário SS14 e outras informações do jogo serão repassados para a discórdia.
 
 # Discord relay formatting
-feedbackpopup-discord-format-header =  Número redondo: { $roundNumber }, nome do jogador: { $playerName }]```
+feedbackpopup-discord-format-header = ```[Round number: { $roundNumber }, nome do jogador: { $playerName }]```
 
 feedbackpopup-discord-format-info =  Nome do comentário: **{ $feedbackName }**
 

@@ -2,7 +2,7 @@ research-console-menu-title = Console de P&D
 
 research-console-menu-research-points-text = Pesquisa: [color=orchid]{ $points }[/color]
 
-research-console-menu-main-discipline = Disciplina Principal: [color=]{ $color }]{ $name }[/color]
+research-console-menu-main-discipline = Main Discipline: [color={ $color }]{ $name }[/color]
 
 research-console-menu-server-selection-button =  Lista de servidores
 

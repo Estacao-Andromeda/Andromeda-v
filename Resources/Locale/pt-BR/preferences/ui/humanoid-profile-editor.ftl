@@ -93,7 +93,7 @@ humanoid-profile-editor-job-priority-low-button =  Baixo.
 
 humanoid-profile-editor-job-priority-never-button =  Nunca.
 
-humanoid-profile-editor-naming-rules-warning =  Aviso: nomes e descrições de IC ofensivos ou LRP levarão a intervenção administrativa neste servidor.\[Rules\] para mais.
+humanoid-profile-editor-naming-rules-warning =  Aviso: nomes e descrições de IC ofensivos ou LRP levarão a intervenção administrativa neste servidor. \[Rules\] para mais.
 
 humanoid-profile-editor-markings-tab =  Marcações
 
@@ -104,7 +104,7 @@ humanoid-profile-editor-traits-tab = Traços
 
 humanoid-profile-editor-no-traits =  Não há traços disponíveis.
 
-humanoid-profile-editor-trait-count-hint =  Pontos disponíveis:{ $current }/{ $max }]
+humanoid-profile-editor-trait-count-hint = Points available: [{ $current }/{ $max }]
 
 trait-category-speech = Traços de fala
 

@@ -1,7 +1,7 @@
 # Headings
 turret-controls-window-title = Sistema de Controle de Defesa Autônomo
 
-turret-controls-window-turret-status-label =  Dispositivos ligados.{ $count }]
+turret-controls-window-turret-status-label = Linked devices [{ $count }]
 
 turret-controls-window-armament-controls-label =  Armamento
 
@@ -24,7 +24,7 @@ turret-controls-window-turret-deploying = ATIVANDO
 
 turret-controls-window-turret-firing = IMOVER O ALVO
 
-turret-controls-window-turret-error = ERRO [404]
+turret-controls-window-turret-error = ERROR [404]
 
 turret-controls-window-turret-broken = INOPERÁVEL
 

@@ -51,7 +51,10 @@ cmd-banlist-hint = <Nome/ID do usuário>
 
 cmd-ban_exemption_update-desc =  Estabelecer uma isenção para um tipo de proibição de um jogador.
 
-cmd-ban_exemption_update-help = Uso: ban exemption update <player> <flag> [<flag> [...]] Especificar várias bandeiras para dar a um jogador múltiplas bandeiras de isenção de ban.
+cmd-ban_exemption_update-help =
+    Usage: ban_exemption_update <player> <flag> [<flag> [...]]
+    Specify multiple flags to give a player multiple ban exemption flags.
+    To remove all exemptions, run this command and give "None" as only flag.
 
 cmd-ban_exemption_update-nargs =  Esperava pelo menos 2 argumentos.
 
@@ -135,7 +138,7 @@ ban-panel-erase =  Apagar mensagens de bate-papo e jogador de rodada
 ban-panel-expiry-error = Err
 
 # Ban string
-server-ban-string = { $admin }  criado um { $severity } A proibição do servidor de gravidade que expira. { $expires } em [{ $name }, { $ip }, { $hwid }...com razão. { $reason }
+server-ban-string = { $admin }  criado um { $severity } A proibição do servidor de gravidade que expira. { $expires } for [{ $name }, { $ip }, { $hwid }], with reason: { $reason }
 
 server-ban-string-no-pii = { $admin }  criado um { $severity } A proibição do servidor de gravidade que expira. { $expires } para { $name } com razão: { $reason }
 

@@ -36,7 +36,7 @@ cargo-console-menu-order-reason-description =  Razões: { $reason }
 
 cargo-console-menu-populate-categories-all-text =  Todos.
 
-cargo-console-menu-populate-orders-cargo-order-row-product-name-text = { $productName } (x{ $orderAmount }) por { $orderRequester } de [color=]{ $accountColor }]{ $account }[/color]
+cargo-console-menu-populate-orders-cargo-order-row-product-name-text = { $productName } (x{ $orderAmount }) por { $orderRequester } from [color={ $accountColor }]{ $account }[/color]
 
 cargo-console-menu-cargo-order-row-approve-button = Aprovar
 
@@ -83,7 +83,7 @@ cargo-console-unlock-approved-order-broadcast = [bold]{ $productName } x{ $order
 
 cargo-console-fund-withdraw-broadcast = [bold]{ $name } Retirado { $amount } -Spesos de... { $name1 } \[{ $code1 }\]
 
-cargo-console-fund-transfer-broadcast = [bold]{ $name } Transferido. { $amount } -Spesos de... { $name1 } \[{ $code1 }\] para { $name2 } \[{ $code2 }\][/bold]
+cargo-console-fund-transfer-broadcast = [bold]{ $name } Transferido. { $amount } -Spesos de... { $name1 } \[{ $code1 }\] to { $name2 } \[{ $code2 }\][/bold]
 
 cargo-console-fund-transfer-user-unknown =  Desconhecido
 

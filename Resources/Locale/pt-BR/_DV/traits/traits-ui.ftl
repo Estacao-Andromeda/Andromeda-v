@@ -51,13 +51,13 @@ trait-condition-species-is =  Você deve ser um... [color=yellow]{ $species }[/c
 
 trait-condition-species-not =  Você não deve ser um [color=yellow]{ $species }[/color].
 
-trait-condition-job-is =  Você deve ser uma cor.{ $color }]{ $job }[/color].
+trait-condition-job-is = You must be a [color={ $color }]{ $job }[/color].
 
-trait-condition-job-not =  Você não deve ser uma [color=]{ $color }]{ $job }[/color].
+trait-condition-job-not = You must not be a [color={ $color }]{ $job }[/color].
 
-trait-condition-department-is =  Você deve estar na [color=]{ $color }]{ $department }[/color]  Departamento.
+trait-condition-department-is = You must be in the [color={ $color }]{ $department }[/color]  Departamento.
 
-trait-condition-department-not =  Você não deve estar na [color={ $color }]{ $department }[/color]  Departamento.
+trait-condition-department-not = You must not be in the [color={ $color }]{ $department }[/color]  Departamento.
 
 trait-condition-borg-not =  Você não deve ser um [color=yellow]borg[/color].
 

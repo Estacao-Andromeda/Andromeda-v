@@ -27,7 +27,7 @@ comp-pda-ui-footer =  Assistente Digital Pessoal
 
 comp-pda-ui-station =  Estação: [color=white]{ $station }[/color]
 
-comp-pda-ui-station-alert-level =  Nível de alerta: [color=]{ $color }]{ $level }[/color]
+comp-pda-ui-station-alert-level = Alert Level: [color={ $color }]{ $level }[/color]
 
 comp-pda-ui-station-alert-level-instructions =  Instruções: [color=white]{ $instructions }[/color]
 

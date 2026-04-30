@@ -1,17 +1,17 @@
 # also used in MakeGhostRuleWindow and MakeGhostRoleCommand
 ghost-role-component-default-rules =  Não se lembra de nada que aprendeu como fantasma, pode-se lembrar do conhecimento sobre o jogo em geral, como cozinhar, como usar objetos, etc. [color=red] NÃO[/color]  permite lembrar, digamos, o nome, aparência, etc. de seu personagem anterior.
 
-ghost-role-information-nonantagonist-rules =  Você é [color={ role-type-crew-aligned-alternate-color }][bold]{ role-type-crew-aligned-name }[/bold][/color] Você não deve procurar prejudicar a estação e sua tripulação, você não se lembra de nada da sua vida anterior, e você não se lembra de nada que aprendeu como um fantasma, você pode lembrar do conhecimento sobre o jogo em geral, como cozinhar, como usar objetos, etc. [color=red] NÃO[/color]  permite lembrar, digamos, o nome, aparência, etc. de seu personagem anterior.
+ghost-role-information-nonantagonist-rules = You are [color={ role-type-crew-aligned-alternate-color }][bold]{ role-type-crew-aligned-name }[/bold][/color] Você não deve procurar prejudicar a estação e sua tripulação, você não se lembra de nada da sua vida anterior, e você não se lembra de nada que aprendeu como um fantasma, você pode lembrar do conhecimento sobre o jogo em geral, como cozinhar, como usar objetos, etc. [color=red] NÃO[/color]  permite lembrar, digamos, o nome, aparência, etc. de seu personagem anterior.
 
-ghost-role-information-freeagent-rules =  Você é uma cor.{ role-type-free-agent-color }][bold]{ role-type-free-agent-name }[/bold][/color] Você é livre para agir como um antagonista ou não-antagonista, você não se lembra de nada da sua vida anterior, e você não se lembra de nada que aprendeu como um fantasma, você pode lembrar do conhecimento sobre o jogo em geral, como cozinhar, como usar objetos, etc. [color=red] NÃO[/color]  permite lembrar, digamos, o nome, aparência, etc. de seu personagem anterior.
+ghost-role-information-freeagent-rules = You are a [color={ role-type-free-agent-color }][bold]{ role-type-free-agent-name }[/bold][/color] Você é livre para agir como um antagonista ou não-antagonista, você não se lembra de nada da sua vida anterior, e você não se lembra de nada que aprendeu como um fantasma, você pode lembrar do conhecimento sobre o jogo em geral, como cozinhar, como usar objetos, etc. [color=red] NÃO[/color]  permite lembrar, digamos, o nome, aparência, etc. de seu personagem anterior.
 
-ghost-role-information-antagonist-rules =  Você é uma cor.{ role-type-solo-antagonist-color }][bold]{ role-type-solo-antagonist-name }[/bold][/color] Você não se lembra de nada que aprendeu como um fantasma, você pode lembrar do conhecimento sobre o jogo em geral, como cozinhar, como usar objetos, etc. [color=red] NÃO[/color]  permite lembrar, digamos, o nome, aparência, etc. de seu personagem anterior.
+ghost-role-information-antagonist-rules = You are a [color={ role-type-solo-antagonist-color }][bold]{ role-type-solo-antagonist-name }[/bold][/color] Você não se lembra de nada que aprendeu como um fantasma, você pode lembrar do conhecimento sobre o jogo em geral, como cozinhar, como usar objetos, etc. [color=red] NÃO[/color]  permite lembrar, digamos, o nome, aparência, etc. de seu personagem anterior.
 
-ghost-role-information-rules-team-antagonist =  Você é uma cor.{ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] Suas intenções são claras e prejudiciais para a estação e sua tripulação. [bold] Trabalhe com sua equipe.[/bold]  Você não se lembra de nada que aprendeu como um fantasma, você pode lembrar do conhecimento sobre o jogo em geral, como cozinhar, como usar objetos, etc. [color=red] NÃO[/color]  permite lembrar, digamos, o nome, aparência, etc. de seu personagem anterior.
+ghost-role-information-rules-team-antagonist = You are a [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] Suas intenções são claras e prejudiciais para a estação e sua tripulação. [bold] Trabalhe com sua equipe.[/bold]  Você não se lembra de nada que aprendeu como um fantasma, você pode lembrar do conhecimento sobre o jogo em geral, como cozinhar, como usar objetos, etc. [color=red] NÃO[/color]  permite lembrar, digamos, o nome, aparência, etc. de seu personagem anterior.
 
-ghost-role-information-familiar-rules =  Você é uma cor.{ role-type-familiar-color }][bold]{ role-type-familiar-name }[/bold][/color] Você não se lembra de nada que aprendeu como fantasma, você pode lembrar do conhecimento sobre o jogo em geral, como cozinhar, como usar objetos, etc. [color=red] NÃO[/color]  permite lembrar, digamos, o nome, aparência, etc. de seu personagem anterior.
+ghost-role-information-familiar-rules = You are a [color={ role-type-familiar-color }][bold]{ role-type-familiar-name }[/bold][/color] Você não se lembra de nada que aprendeu como fantasma, você pode lembrar do conhecimento sobre o jogo em geral, como cozinhar, como usar objetos, etc. [color=red] NÃO[/color]  permite lembrar, digamos, o nome, aparência, etc. de seu personagem anterior.
 
-ghost-role-information-silicon-rules =  Você é uma cor.{ role-type-silicon-color }][bold]{ role-type-silicon-name }[/bold][/color]Obedeça suas leis. { role-type-free-agent-name }  Você não se lembra de nada que aprendeu como fantasma, você pode lembrar do conhecimento sobre o jogo em geral, como cozinhar, como usar objetos, etc. [color=red] NÃO[/color]  permite lembrar, digamos, o nome, aparência, etc. de seu personagem anterior.
+ghost-role-information-silicon-rules = You are a [color={ role-type-silicon-color }][bold]{ role-type-silicon-name }[/bold][/color]Obedeça suas leis. { role-type-free-agent-name }  Você não se lembra de nada que aprendeu como fantasma, você pode lembrar do conhecimento sobre o jogo em geral, como cozinhar, como usar objetos, etc. [color=red] NÃO[/color]  permite lembrar, digamos, o nome, aparência, etc. de seu personagem anterior.
 
 ghost-role-information-mouse-name = Rato
 
@@ -45,7 +45,7 @@ ghost-role-information-giant-spider-name = Aranha Gigante
 
 ghost-role-information-giant-spider-description =  Os habitantes desta estação parecem muito saborosos, e sua teia pegajosa é perfeita para pegá-los!
 
-ghost-role-information-giant-spider-rules =  Você é uma cor.{ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com todas as outras aranhas gigantes.
+ghost-role-information-giant-spider-rules = You are a [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com todas as outras aranhas gigantes.
 
 ghost-role-information-cognizine-description = Consciente da magia da consciência.
 
@@ -65,7 +65,7 @@ ghost-role-information-angry-slimes-name = Lixo.
 
 ghost-role-information-angry-slimes-description =  Todos ao seu redor irritam seus instintos, os destrói!
 
-ghost-role-information-angry-slimes-rules =  Você é uma cor.{ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com todas as outras lombrigas furiosas.
+ghost-role-information-angry-slimes-rules = You are a [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com todas as outras lombrigas furiosas.
 
 ghost-role-information-smile-name =  Sorria para o lamaçal
 
@@ -79,7 +79,7 @@ ghost-role-information-xeno-name = Xeno.
 
 ghost-role-information-xeno-description =  Você é um xeno, coopera com sua colmeia para matar todos os tripulantes!
 
-ghost-role-information-xeno-rules =  Você é uma cor.{ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com todos os outros xenos.
+ghost-role-information-xeno-rules = You are a [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com todos os outros xenos.
 
 ghost-role-information-revenant-name = Regressado.
 
@@ -160,13 +160,13 @@ ghost-role-information-space-dragon-name =  Dragão do Espaço
 
 ghost-role-information-space-dragon-description =  Ligue para 3 fendas de carpa e assuma este quadrante!
 
-ghost-role-information-space-dragon-rules =  Você é uma cor.{ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] Com toda a sua carpa convocada.
+ghost-role-information-space-dragon-rules = You are a [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] Com toda a sua carpa convocada.
 
-ghost-role-information-space-dragon-summoned-carp-rules =  Você é uma cor.{ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com seu dragão e seus aliados.
+ghost-role-information-space-dragon-summoned-carp-rules = You are a [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com seu dragão e seus aliados.
 
 ghost-role-information-space-dragon-dungeon-description = Defenda a masmorra da expedição com seus companheiros peixinhos!
 
-ghost-role-information-space-dragon-dungeon-rules =  Você é uma cor.{ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com todas as multidões de calabouços.
+ghost-role-information-space-dragon-dungeon-rules = You are a [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com todas as multidões de calabouços.
 
 ghost-role-information-cluwne-name = Cluwne
 
@@ -224,13 +224,13 @@ ghost-role-information-centcom-official-name =  Oficial da CentComm
 
 ghost-role-information-centcom-official-description =  Realizar tarefas relacionadas à CentComm, como inspecionar a estação, anotar avaliações de desempenho para chefes de equipe, e gerenciar o fax.
 
-ghost-role-information-nukeop-rules =  Você é uma cor.{ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color]  Agentes secretos não são garantidos para ajudá-lo.
+ghost-role-information-nukeop-rules = You are a [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color]  Agentes secretos não são garantidos para ajudá-lo.
 
 ghost-role-information-loneop-name = "Operador Solitário"
 
 ghost-role-information-loneop-description =  Você é um único agente nuclear.
 
-ghost-role-information-loneop-rules =  Você é uma cor.{ role-type-team-antagonist-color }][bold]{ role-type-solo-antagonist-name }[/bold][/color] Agentes secretos não são garantidos para ajudá-lo.
+ghost-role-information-loneop-rules = You are a [color={ role-type-team-antagonist-color }][bold]{ role-type-solo-antagonist-name }[/bold][/color] Agentes secretos não são garantidos para ajudá-lo.
 
 ghost-role-information-behonker-name = Behonker.
 
@@ -244,13 +244,13 @@ ghost-role-information-Death-Squad-name =  Esquadrão da Morte, agente.
 
 ghost-role-information-Death-Squad-description = Um dos principais agentes da Nanotrasen, aguarde ordens da CentComm ou de um oficial.
 
-ghost-role-information-Death-Squad-rules =  Você é obrigado a obedecer ordens dadas por seu superior, você é efetivamente sua [cor={ role-type-familiar-color }][bold]{ role-type-familiar-name }[/bold][/color].
+ghost-role-information-Death-Squad-rules = You are required to obey orders given by your superior, you are effectively their [color={ role-type-familiar-color }][bold]{ role-type-familiar-name }[/bold][/color].
 
 ghost-role-information-SyndiCat-name = SyndiCat
 
 ghost-role-information-SyndiCat-description =  Você é o fiel animal de estimação treinado de agentes nucleares com uma microbomba.
 
-ghost-role-information-SyndiCat-rules =  Você é uma cor.{ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com o agente que o chamou.
+ghost-role-information-SyndiCat-rules = You are a [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com o agente que o chamou.
 
 ghost-role-information-Cak-name = Cak.
 
@@ -284,7 +284,7 @@ ghost-role-information-syndicate-reinforcement-name =  Agente de Sindicato
 
 ghost-role-information-syndicate-reinforcement-description =  Você, a primeira pessoa que o sindicato encontrar, vai ajudá-los.
 
-ghost-role-information-syndicate-reinforcement-rules =  Você é uma cor.{ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com o agente que o chamou.
+ghost-role-information-syndicate-reinforcement-rules = You are a [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com o agente que o chamou.
 
 ghost-role-information-syndicate-reinforcement-medic-name =  Médico de Sindicato
 
@@ -302,7 +302,7 @@ ghost-role-information-nukeop-reinforcement-name =  Operação Nuclear
 
 ghost-role-information-nukeop-reinforcement-description =  Os agentes nucleares precisam de reforços.
 
-ghost-role-information-nukeop-reinforcement-rules =  Você é uma cor.{ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com os agentes nucleares que o chamaram.
+ghost-role-information-nukeop-reinforcement-rules = You are a [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com os agentes nucleares que o chamaram.
 
 ghost-role-information-syndicate-monkey-reinforcement-name = Sindicate Monkey Agent
 

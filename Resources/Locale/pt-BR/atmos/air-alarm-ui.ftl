@@ -31,11 +31,11 @@ air-alarm-ui-window-auto-mode-label =  Modo automático
 
 air-alarm-ui-window-pressure = { $pressure } KPa.
 
-air-alarm-ui-window-pressure-indicator =  Pressão: [color={ $color }]{ $pressure } KPa.[/color]
+air-alarm-ui-window-pressure-indicator = Pressure: [color={ $color }]{ $pressure } KPa.[/color]
 
 air-alarm-ui-window-temperature = { $tempC } C ({ $temperature } K)
 
-air-alarm-ui-window-temperature-indicator =  Temperatura: [color={ $color }]{ $tempC } C ({ $temperature } K)[/color]
+air-alarm-ui-window-temperature-indicator = Temperature: [color={ $color }]{ $tempC } C ({ $temperature } K)[/color]
 
 air-alarm-ui-window-tab-vents = Ventilações
 
@@ -45,7 +45,7 @@ air-alarm-ui-window-tab-sensors =  Sensores.
 
 air-alarm-ui-gases = { $gas }: { $amount } mol ({ $percentage }%)
 
-air-alarm-ui-gases-indicator = { $gas }[color={ $color }]{ $amount } mol ({ $percentage }%)[/color]
+air-alarm-ui-gases-indicator = { $gas }: [color={ $color }]{ $amount } mol ({ $percentage }%)[/color]
 
 air-alarm-ui-mode-filtering = Filtragem
 

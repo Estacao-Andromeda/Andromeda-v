@@ -11,6 +11,6 @@ parcel-wrap-popup-being-wrapped-self =  Você começa a embrulhar as encomendas.
 # Shown when parcel wrap is examined in details range
 parcel-wrap-examine-detail-uses =
     { $uses ->
-        [one]  Há [color={ $markupUsesColor }]{ $uses }[/color] Use a esquerda.
-       *[other]  Há [color={ $markupUsesColor }]{ $uses }[/color]  usa esquerda
+        [one] There is [color={ $markupUsesColor }]{ $uses }[/color] Use a esquerda.
+       *[other] There are [color={ $markupUsesColor }]{ $uses }[/color]  usa esquerda
     }.

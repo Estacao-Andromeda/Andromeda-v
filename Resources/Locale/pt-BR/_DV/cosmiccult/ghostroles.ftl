@@ -8,7 +8,7 @@ ghost-role-information-colossus-name = Colosso Entropo
 
 ghost-role-information-colossus-description =  Peça uma Efígie da Entropia para perpetuar sua existência e acelerar o fim de todas as coisas!
 
-ghost-role-information-colossus-rules =  Você é uma cor.{ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com qualquer culto cósmico que possa estar presente.
+ghost-role-information-colossus-rules = You are a [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] com qualquer culto cósmico que possa estar presente.
 
 terror-colossus =  Atenção, tripulação, parece que alguém em sua estação chamou a atenção de uma enorme anomalia maligna.
 

@@ -10,4 +10,4 @@ play-global-sound-command-arg-path = *Path>
 
 play-global-sound-command-arg-volume = [volume]
 
-play-global-sound-command-arg-usern = [usuário { $user }]
+play-global-sound-command-arg-usern = [user { $user }]

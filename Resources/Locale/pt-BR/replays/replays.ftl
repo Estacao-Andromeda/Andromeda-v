@@ -37,15 +37,15 @@ replay-info-none-selected = Sem repetição selecionada.
 replay-info-invalid = [color=red] Repetição inválida selecionada[/color]
 
 replay-info-info =
-    { "[" }Selecionado:[/color]  { $name } ({ $file })
-    { "[" } Hora:[/color]   { $time }
-    { "[" }- É o que eu quero.[/color]   { $roundId }
-    { "[" }- Não, não.[/color]   { $duration }
-    { "[" }Cor=cinza] Garfo:[/color]   { $forkId }
-    { "[" }-Versão:[/color]   { $version }
-    { "[" }- Não, não.[/color]   { $engVersion }
-    { "[" }- Tipo Hash:[/color]   { $hash }
-    { "[" }- Comp Hash:[/color]   { $compHash }
+    { "[" }color=gray]Selected:[/color]  { $name } ({ $file })
+    { "[" }color=gray]Time:[/color]   { $time }
+    { "[" }color=gray]Round ID:[/color]   { $roundId }
+    { "[" }color=gray]Duration:[/color]   { $duration }
+    { "[" }color=gray]ForkId:[/color]   { $forkId }
+    { "[" }color=gray]Version:[/color]   { $version }
+    { "[" }color=gray]Engine:[/color]   { $engVersion }
+    { "[" }color=gray]Type Hash:[/color]   { $hash }
+    { "[" }color=gray]Comp Hash:[/color]   { $compHash }
 
 # Replay selection window
 replay-menu-select-title =  Selecione Replay

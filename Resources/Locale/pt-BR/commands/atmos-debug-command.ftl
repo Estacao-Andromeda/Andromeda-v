@@ -10,7 +10,7 @@ cmd-atvrange-error-zero =  Escala não pode ser zero, pois isso causaria uma div
 
 cmd-atvmode-desc = Define o modo de depuração do atmos.
 
-cmd-atvmode-help = Uso: { $command } [TotalMoles/GasMoles/Temperature] [[ID do gás (para GasMoles)]
+cmd-atvmode-help = Uso: { $command } <TotalMoles/GasMoles/Temperature> [<gas ID (for GasMoles)>]
 
 cmd-atvmode-error-invalid =  Modo inválido
 

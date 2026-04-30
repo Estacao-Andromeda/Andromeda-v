@@ -55,10 +55,10 @@ revival-contract-menu-prompt =  Vender sua alma por uma segunda chance?
 default-contract-content =
     Este contrato de ligação fez este dia entre o Partido Infernal (a seguir "Contrator") e o Partido Mortal (a seguir "Contrato")
     
-    { "[" }"Clauses of Binding:{ "[" }- Que droga!
-    { "[" }As seguintes partes desistem dos seguintes bens:{ "[" }Itálico{ "]" }
+    { "[" }bold]Clauses of Binding:{ "[" }/bold]
+    { "[" }italic]The following parties give up the following possessions{ "[" }Itálico{ "]" }
     
     Contratista, dono da alma, contratado, morto.
     
-    { "[" } Todas as cláusulas entram em vigor após a assinatura deste trabalho por ambas as partes.{ "[" }- O que é isso?
-    { "[" }Itálico]{ "[" }As clausuras podem não estar quebradas.{ "[" }- Não.{ "[" }- O que é isso?
+    { "[" }italic]All clauses come into effect upon signing of this paper by both parties.{ "[" }/italic]
+    { "[" }italic]{ "[" }color=#ac3a0d]Clauses may not be broken. Ever.{ "[" }/color]{ "[" }/italic]

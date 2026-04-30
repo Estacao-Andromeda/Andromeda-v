@@ -290,6 +290,6 @@ bounty-description-cotton-boll = Um enxame de mariposas comeu todo o papel e tec
 
 bounty-description-microwave-machine-board =  Sr. Giggles achou engraçado colocar garfos em todos os microondas da cozinha, nos ajudar a substituí-los antes que os chefs comecem a fazer hambúrgueres de palhaço.
 
-bounty-description-flashes = GRITOS \[Station]  Nós precisamos de 6 flashes de acordo com uma norma.[TrainingExercise]  Tudo é uma questão de segurança.[Normal].
+bounty-description-flashes = GRITOS \[Station]  Nós precisamos de 6 flashes de acordo com uma norma \[TrainingExercise]  Tudo é... \[Normal].
 
 bounty-description-ring =  Neste dia extraordinário haverá um casamento entre os Gelts, mas o Sr. Gelt perdeu os anéis.

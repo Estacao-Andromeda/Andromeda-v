@@ -11,7 +11,7 @@ welder-component-on-examine-welder-lit-message = [color=orange]Lit.[/color]
 welder-component-on-examine-welder-not-lit-message =  Não está acesa.
 
 welder-component-on-examine-detailed-message =
-    Combustível: [color={ $colorName }]{ $fuelLeft }/{ $fuelCapacity }[/color]
+    Fuel: [color={ $colorName }]{ $fuelLeft }/{ $fuelCapacity }[/color]
     { $status }
 
 welder-component-suicide-lit-others-message = { $victim }  Parece que estão tentando se suicidar!

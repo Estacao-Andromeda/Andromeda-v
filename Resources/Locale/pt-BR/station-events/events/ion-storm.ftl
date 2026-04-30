@@ -1,6 +1,6 @@
 station-event-ion-storm-start-announcement =  Tempestade de íons detectada perto da estação.
 
-ion-storm-law-scrambled-number = [font="Monospace"][Taxa de compressão = 250 comprimento ={ $length } Chars="@###$$&%!01"/][/font]
+ion-storm-law-scrambled-number = [font="Monospace"][scramble rate=250 length={ $length } chars="@@###$$&%!01"/][/font]
 
 ion-storm-you =  Você
 

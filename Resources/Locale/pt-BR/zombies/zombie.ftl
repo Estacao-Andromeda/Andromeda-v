@@ -8,7 +8,7 @@ zombie-name-prefix =  zombiado { $baseName }
 
 zombie-role-desc =  Uma criatura malévola dos mortos.
 
-zombie-role-rules =  Você é uma cor.{ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] Procurem os vivos e mordam-nos para infectá-los e transformá-los em zumbis, trabalhem juntos com os outros zumbis e permaneçam infectados para alcançar a estação.
+zombie-role-rules = You are a [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color] Procurem os vivos e mordam-nos para infectá-los e transformá-los em zumbis, trabalhem juntos com os outros zumbis e permaneçam infectados para alcançar a estação.
 
 zombie-permadeath =  Desta vez, você está morto de verdade.
 

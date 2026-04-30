@@ -63,7 +63,7 @@ anomaly-gorilla-core-slot-name =  Núcleo de Anomalias
 anomaly-gorilla-charge-none =  Não tem [bold] núcleo da anomalia[/bold]  dentro dele.
 
 anomaly-gorilla-charge-limit =
-     Tem [color=]{ $count ->
+    It has [color={ $count ->
         [3] Verde
         [2]  Amarelo
         [1]  laranja

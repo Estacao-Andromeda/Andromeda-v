@@ -50,7 +50,7 @@ atmos-alerts-window-danger-state =  Perigo!
 
 atmos-alerts-window-invalid-state = Inativo
 
-atmos-alerts-window-no-active-alerts = [font size=16][color=white]Sem alertas ativos.[/color] [color={ $color }Situação normal[/color][/font]
+atmos-alerts-window-no-active-alerts = [font size=16][color=white]Sem alertas ativos.[/color] [color={ $color }]Situation normal[/color][/font]
 
 atmos-alerts-window-no-data-available =  Não há dados disponíveis.
 

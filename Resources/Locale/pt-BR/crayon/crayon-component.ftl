@@ -1,4 +1,4 @@
-crayon-drawing-label =  Desenho: [color=]{ $color }]{ $state }[/color] ({ $charges }/{ $capacity })
+crayon-drawing-label = Drawing: [color={ $color }]{ $state }[/color] ({ $charges }/{ $capacity })
 
 crayon-interact-not-enough-left-text =  Não sobrou o suficiente.
 

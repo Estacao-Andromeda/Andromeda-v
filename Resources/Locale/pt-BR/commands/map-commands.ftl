@@ -1,4 +1,4 @@
-cmd-loadgamemap-help = Loadgamap <mapid> <gamapa> [<x> <y> [<nome>]
+cmd-loadgamemap-help = loadgamemap <mapid> <gamemap> [<x> <y> [<name>]]
 
 cmd-listgamemaps-desc =  Lista os mapas de jogo que podem ser usados pelo Loadgamapa.
 

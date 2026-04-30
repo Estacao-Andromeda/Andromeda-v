@@ -1,4 +1,4 @@
-charger-examine =  Cargas em [color=]{ $color }]{ $chargeRate }W[/color].
+charger-examine = Charges at [color={ $color }]{ $chargeRate }W[/color].
 
 charger-component-charge-rate =  Taxa de carga
 

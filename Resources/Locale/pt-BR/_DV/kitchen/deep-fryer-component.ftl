@@ -22,7 +22,7 @@ deep-fryer-throw-miss = { CAPITALIZE(THE($item)) } Erra a fritadeira e salta!
 
 deep-fryer-throw-success =  Você joga { THE($item) } Para a fritadeira!
 
-deep-fryer-oil-quality-examine = O óleo parece [color=]{ $color }]{ $state }[/color].
+deep-fryer-oil-quality-examine = The oil looks [color={ $color }]{ $state }[/color].
 
 deep-fryer-oil-quality-pristine = Pristine
 

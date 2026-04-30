@@ -1,6 +1,6 @@
 cmd-set-map-atmos-desc = Define a atmosfera de um mapa
 
-cmd-set-map-atmos-help = Setmapatmos, rápido, espaço, temperatura. [moles...]]
+cmd-set-map-atmos-help = setmapatmos <mapid> <space> [<temperature> [moles...]]
 
 cmd-set-map-atmos-removed =  Ambiente removido do mapa { $map }
 

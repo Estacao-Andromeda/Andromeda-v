@@ -16,8 +16,8 @@ robotics-console-hp = [color=gray]Integridade:[/color] [color={ $color }]{ $hp }
 robotics-console-modules = [color=gray] Módulos instalados:[/color] { $count }
 
 robotics-console-brain = [color=gray]Cérebro instalado:[/color] [color={ $brain ->
-        [true] Sim.
-       *[false]  Não
+        [true] green]Yes
+       *[false] red]No
     }[/color]
 
 robotics-console-locked-message =  Controles bloqueados, identificação.

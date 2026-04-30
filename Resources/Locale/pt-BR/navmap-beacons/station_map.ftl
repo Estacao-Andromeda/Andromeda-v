@@ -19,14 +19,14 @@ nav-beacon-text-label = Rótulo:
 nav-beacon-button-apply =  Aplicar
 
 nav-beacon-examine-text =
-    É [color=]{ $enabled ->
-        [true] -Stevengreen.
-       *[false] - Não, não, não.
-    }[/color] e o visor lê [color={ $color }]"{ $label }"[/color]
+    It is [color={ $enabled ->
+        [true] forestgreen]on
+       *[false] crimson]off
+    }[/color] and the display reads [color={ $color }]"{ $label }"[/color]
 
 nav-beacon-pos-no-beacons = No meio do nada
 
-nav-beacon-pos-format = [color={ $color } Perto { $marker }[/color]
+nav-beacon-pos-format = [color={ $color }]near { $marker }[/color]
 
 nav-beacon-pos-format-direction = [color={ $color }]{ $modifier }{ $direction } de { $marker }[/color]
 

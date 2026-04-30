@@ -12,6 +12,6 @@ surgery-tool-examinable-verb-message =  Examine o uso desta ferramenta em cirurg
 
 surgery-tool-header =  Isso pode ser usado em cirurgias como:
 
-surgery-tool-unlimited = - { $tool } em [color=]{ $color }]{ $speed }x[/color]  Velocidade
+surgery-tool-unlimited = - { $tool } at [color={ $color }]{ $speed }x[/color]  Velocidade
 
-surgery-tool-used = - { $tool } em [color=]{ $color }]{ $speed }x[/color]  Velocidade, [color=red] Então se cansa.[/color]
+surgery-tool-used = - { $tool } at [color={ $color }]{ $speed }x[/color]  Velocidade, [color=red] Então se cansa.[/color]

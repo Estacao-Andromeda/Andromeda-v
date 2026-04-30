@@ -1,5 +1,5 @@
 gas-pressure-regulator-system-examined =
-    A válvula está [color={ $statusColor }]{ $open ->
+    The valve is [color={ $statusColor }]{ $open ->
         [true]  Abra.
        *[false]  Fechado.
     }[/color].

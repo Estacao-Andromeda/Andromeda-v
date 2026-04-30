@@ -55,7 +55,7 @@ chat-manager-entity-looc-wrap-message = - Não. { $entityName }: { $message }
 
 chat-manager-send-ooc-wrap-message = OOC: { $playerName }: { $message }
 
-chat-manager-send-ooc-patron-wrap-message = OOC: [color=]{ $patronColor }]{ $playerName }[/color]: { $message }
+chat-manager-send-ooc-patron-wrap-message = OOC: [color={ $patronColor }]{ $playerName }[/color]: { $message }
 
 chat-manager-send-dead-chat-wrap-message = { $deadChannelName }: [BubbleHeader]{ $playerName }[/BubbleHeader]: [BubbleContent]{ $message }[/BubbleContent]
 
