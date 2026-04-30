@@ -1,0 +1,17 @@
+canvas-color = Cor
+canvas-paintcode = Código de pintura
+canvas-finalize-import = Importar
+canvas-export = Exportar
+canvas-finalize = Finalizar
+canvas-signature = Assinatura
+canvas-color-preview = Color Preview
+canvas-paintcode-label = Paint Code
+canvas-resolution = Resolution
+canvas-height = Height
+canvas-width = Width
+canvas-artist-signature = Artist Signature
+canvas-color-controls = Color Controls
+canvas-eraser = Eraser
+canvas-ready = Ready
+canvas-finalized = Finalized by {$artist}
+canvas-drawing-label = Canvas
