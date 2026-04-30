@@ -1,0 +1,1 @@
+thief-backpack-category-syndie-description-deltav =  Você fez algumas conexões, uísque, eco, incluindo um emag, porta-porta, cigarros interdyne, uma palavra-chave do Sindicato, um rádio Jammer, um isqueiro e alguns cristais vermelhos estranhos.

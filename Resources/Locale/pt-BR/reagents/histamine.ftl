@@ -1,0 +1,3 @@
+histamine-effect-light-itchiness =  Você está com um pouco de coceira...
+
+histamine-effect-heavy-itchiness =  Você está com muita coceira!
