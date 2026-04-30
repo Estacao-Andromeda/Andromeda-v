@@ -1,3 +1,16 @@
+# Tier 1 # Andromeda
+- type: technology # Adds separate research for Frontier Plant Analyzer
+  id: PlantAnalyzerTechnology
+  name: research-technology-plant-analyzer
+  icon:
+    sprite: _NF/Objects/Devices/plant_analyzer.rsi
+    state: icon
+  discipline: CivilianServices
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - PlantAnalyzer
+
 # Tier 2
 
 - type: technology
@@ -11,15 +24,3 @@
   cost: 7000
   recipeUnlocks:
   - ClothingOuterHardsuitVoidParamed
-
-- type: technology # Adds separate research for Frontier Plant Analyzer
-  id: PlantAnalyzerTechnology
-  name: research-technology-plant-analyzer
-  icon:
-    sprite: _NF/Objects/Devices/plant_analyzer.rsi
-    state: icon
-  discipline: CivilianServices
-  tier: 2
-  cost: 7000
-  recipeUnlocks:
-  - PlantAnalyzer
