@@ -1,0 +1,3 @@
+comp-generator-failsafe = O { $target } Agita como o gatilho de segurança de contenção!
+
+comp-generator-failsafe-disabled =  Algo se apaga dentro de { $target }...

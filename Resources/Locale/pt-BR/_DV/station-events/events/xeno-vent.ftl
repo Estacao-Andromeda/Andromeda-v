@@ -1,0 +1,1 @@
+station-event-xeno-vent-start-announcement =  Confirmados avistamentos de animais alienígenas hostis na estação, aconselham a se armarem, barricarem portas e se defenderem, se necessário, a segurança é aconselhada a erradicar a ameaça o mais rápido possível.

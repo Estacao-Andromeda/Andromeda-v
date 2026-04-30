@@ -1,0 +1,3 @@
+capsaicin-effect-light-burn =  Você sente um leve formigamento na garganta...
+
+capsaicin-effect-heavy-burn =  Você está se sentindo como o inferno vomitado em sua boca!
