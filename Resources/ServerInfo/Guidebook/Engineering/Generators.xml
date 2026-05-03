@@ -15,16 +15,17 @@
     [color=#999999][italic]Devices capable of infinite energy — and destructive potential[italic][/color]
   </Box>
 
-  <Box> <!--Far Horizons Port Start-->
+  <Box>
 	  <GuideEntityEmbed Entity="NuclearReactorNormal" Caption=""/>
 	  <GuideEntityEmbed Entity="Turbine" Caption=""/>
   </Box>
+
   <Box>
     ## Nuclear Generator
   </Box>
   <Box>
     [color=#999999][italic]Harnesses the power of nuclear fission to power the station.[italic][/color]
-  </Box> <!--Far Horizons Port End -->
+  </Box>
 
   <Box>
     <GuideEntityEmbed Entity="AmeController" Caption=""/>
@@ -83,4 +84,14 @@
   <Box>
     [color=#999999][italic]Zero-maintenance passive power source[italic][/color]
   </Box>
+
+    <Box>
+      ##SuperMatter
+    </Box>
+    <Box>
+      <GuideEntityEmbed Entity="Supermatter" Caption=""/>
+    </Box>
+    <Box>
+      [color=#999999][italic]A powerful and dangerous energy source that requires careful handling and management[italic][/color]
+    </Box>
 </Document>

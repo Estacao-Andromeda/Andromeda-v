@@ -1,5 +1,16 @@
+// SPDX-FileCopyrightText: 2022 Alex Evgrashin <aevgrashin@yandex.ru>
+// SPDX-FileCopyrightText: 2022 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+// SPDX-FileCopyrightText: 2025 Steve <marlumpy@gmail.com>
+// SPDX-FileCopyrightText: 2025 Tay <td12233a@gmail.com>
+// SPDX-FileCopyrightText: 2025 pa.pecherskij <pa.pecherskij@interfax.ru>
+// SPDX-FileCopyrightText: 2025 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 taydeo <td12233a@gmail.com>
+//
+// SPDX-License-Identifier: MIT
+
 using Content.Server.Radiation.Components;
-using Content.Shared.Nutrition.EntitySystems; // DeltaV
 using Content.Shared.Radiation.Components;
 using Content.Shared.Radiation.Events;
 using Content.Shared.Stacks;
@@ -15,8 +26,6 @@ public sealed partial class RadiationSystem : EntitySystem
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedStackSystem _stack = default!;
-    [Dependency] private readonly OpenableSystem _openable = default!; // DeltaV
-    [Dependency] private readonly SharedMapSystem _maps = default!;
 
     private EntityQuery<RadiationBlockingContainerComponent> _blockerQuery;
     private EntityQuery<RadiationGridResistanceComponent> _resistanceQuery;
@@ -51,9 +60,9 @@ public sealed partial class RadiationSystem : EntitySystem
         _accumulator = 0f;
     }
 
-    public void IrradiateEntity(EntityUid uid, float radsPerSecond, float time, EntityUid? origin = null)
+    public void IrradiateEntity(EntityUid uid, float radsPerSecond, float time)
     {
-        var msg = new OnIrradiatedEvent(time, radsPerSecond, origin);
+        var msg = new OnIrradiatedEvent(time, radsPerSecond, uid);
         RaiseLocalEvent(uid, msg);
     }
 
@@ -78,5 +87,16 @@ public sealed partial class RadiationSystem : EntitySystem
         {
             RemComp<RadiationReceiverComponent>(uid);
         }
+    }
+
+    public float GetRadiationAtCoordinates(EntityCoordinates coordinates)
+    {
+        var gridUid = coordinates.GetGridUid(EntityManager);
+        if (gridUid == null || !_gridQuery.TryGetComponent(gridUid.Value, out var grid))
+            return 0f;
+        var tilePos = grid.TileIndicesFor(coordinates);
+        if (!_tileRadiationCache.TryGetValue(gridUid.Value, out var tileCache))
+            return 0f;
+        return tileCache.TryGetValue(tilePos, out var rads) ? rads : 0f;
     }
 }
