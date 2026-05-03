@@ -1,0 +1,115 @@
+<!--
+SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+SPDX-FileCopyrightText: 2025 corresp0nd <46357632+corresp0nd@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 taydeo <td12233a@gmail.com>
+
+SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+-->
+
+<Document>
+  # Motor de Supermatéria
+
+  O motor de supermatéria é uma fonte de energia incrivelmente perigosa, volátil e radioativa. Sem um gerenciamento cuidadoso, a câmara de supermatéria se incendiará, raios surgirão e, eventualmente, uma explosão destruirá a Engenharia.
+
+  Mas, com os devidos cuidados e manuseio, a supermatéria pode ser uma fonte de energia incrivelmente potente para a estação. Embora uma configuração básica atenda à carga típica de energia da estação, o cristal de supermatéria é fortemente afetado por gases de diversas maneiras — tanto benéficas quanto prejudiciais.
+
+  ## Precauções
+
+  [bold][color=red]NÃO ENTRE INTENCIONALMENTE NO CRISTAL ANTES QUE O RESFRIAMENTO TENHA SIDO CONFIGURADO OU VOCÊ SERÁ BANIDO.[/color][/bold]
+
+  Antes de entrar na câmara de supermatéria, há algumas coisas a serem lembradas para evitar desastres e danos pessoais.
+
+  • Não ligue o cristal antes que o circuito de resfriamento tenha sido configurado. [color=red]Não toque no cristal. Não entre no cristal.[/color]
+
+  • Use proteção contra radiação ao redor do cristal o tempo todo.
+
+  • Não olhe diretamente para o cristal. Óculos de engenharia evitarão alucinações.
+
+  • Se precisar se aproximar do cristal, equipe e ative botas magnéticas.
+
+  ## Cristal de Supermatéria
+
+  <GuideEntityEmbed Entity="Supermatter" Caption=""/>
+
+  O cristal de supermatéria é o foco principal do motor de supermatéria. Ele lentamente sifona e reage com os gases ao seu redor, enquanto emite níveis de radiação incrivelmente prejudiciais — mas lucrativos.
+
+  Quando alimentado — geralmente por emissores — a intensidade de sua radiação aumenta, à medida que oxigênio quente e plasma são liberados como resíduos. Para completar, [color=red]qualquer coisa que toque o cristal é instantaneamente vaporizada[/color].
+
+  ## Coletores de Radiação
+
+  <Box>
+    <GuideEntityEmbed Entity="RadiationCollectorNoTank"/>
+    <GuideEntityEmbed Entity="PlasmaTank"/>
+  </Box>
+
+  Para aproveitar o potencial radioativo do cristal, coletores de radiação são colocados nas proximidades. Estes se conectam a cabos de alta tensão, gerando energia para a estação.
+
+  Os coletores de radiação requerem um tanque cheio de gás de plasma para operar, que precisará ser substituído periodicamente para manter a geração de energia.
+
+  ## Circuito de Resfriamento
+
+  No nível mais fundamental, o cristal de supermatéria é mantido estável por um "circuito" de tubos atmosféricos. A câmara é preenchida com gás frio e seguro, enquanto quaisquer subprodutos nocivos ou indesejados são filtrados do sistema.
+
+  <GuideEntityEmbed Entity="NitrogenCanister"/>
+
+  A maioria das estações vem com recipientes de nitrogênio pré-fornecidos: a supermatéria reage com muita segurança com o nitrogênio, o que a torna um gás ideal para uma configuração básica.
+
+  <Box>
+    <GuideEntityEmbed Entity="GasPort"/>
+    <GuideEntityEmbed Entity="GasPressurePump"/>
+    <GuideEntityEmbed Entity="GasFilter"/>
+  </Box>
+
+  Para configurar o circuito de resfriamento, fixe os cilindros de nitrogênio nas portas do conector de entrada e habilite as respectivas bombas de gás. Siga os tubos, habilitando as bombas de gás e os filtros à medida que avança.
+
+  Tenha cuidado para não ativar as bombas de gás dentro das câmaras de ar da câmara interna antes que o circuito de resfriamento completo esteja configurado. Uma bomba de gás de bypass está localizada fora da câmara de ar externa; use-a para manter o gás fluindo enquanto você trabalha.
+
+  Pelo menos um dos filtros que retornam ao circuito deve ser configurado para filtrar nitrogênio. Isso manterá o nitrogênio resfriado no circuito, garantindo que o cristal seja mantido em parâmetros seguros.
+
+  <GuideEntityEmbed Entity="GasAnalyzer"/>
+
+  Após a configuração completa do circuito de resfriamento, verifique com um analisador de gases para garantir que o gás não esteja preso em nenhum ponto do sistema. Desative a bomba de gás de bypass próxima às câmaras de ar, ative as bombas de gás internas e configure o alarme de ar.
+
+  ## Configuração do Alarme de Ar
+
+  <GuideEntityEmbed Entity="AirAlarm" Caption=""/>
+
+  A maioria dos alarmes de ar tem acesso restrito a técnicos atmosféricos. O alarme de ar da supermatéria é exclusivo e pode ser configurado pelos engenheiros da estação.
+
+  <Box>
+    <GuideEntityEmbed Entity="GasVentPump"/>
+    <GuideEntityEmbed Entity="GasVentScrubber"/>
+  </Box>
+
+  Por padrão, as saídas de ar na câmara da supermatéria só liberam até 101,3 kPa de gás e obedecem aos parâmetros de bloqueio de pressão.
+
+  Usando o alarme de ar, aumente o limite de saída de cada saída ou altere-os para limites de pressão interna. Os recursos de bloqueio de pressão de cada saída também devem ser desativados.
+
+  Os depuradores de ar também precisam ser ajustados em relação à sua configuração padrão. Certifique-se de que cada depurador esteja configurado para filtrar todos os gases e que o recurso WideNet esteja habilitado para máxima eficiência.
+
+  ## Emissores
+
+  <GuideEntityEmbed Entity="Emitter"/>
+
+  Assim que o circuito de resfriamento estiver totalmente configurado e os coletores de radiação preenchidos, o motor de supermatéria estará pronto para ser acionado.
+
+  Emissores são a maneira mais comum de dar a partida na supermatéria e manter sua energia interna alta. Interaja com um emissor para ligá-lo, e ele começará a disparar lasers no cristal.
+
+  ## Experimentação
+
+  <GuideEntityEmbed Entity="ComputerSupermatter"/>
+
+  Embora o nitrogênio seja eficaz em manter a supermatéria segura e estável, ele também prejudica a geração de energia do cristal de supermatéria.
+
+  O console de monitoramento de supermatéria permite a observação atenta do cristal e dos efeitos que os gases exercem sobre ele. Este é um equipamento essencial para experimentos seguros com a supermatéria.
+  <Box>
+    <GuideEntityEmbed Entity="CarbonDioxideCanister" Caption=""/>
+    <GuideEntityEmbed Entity="PlasmaCanister" Caption=""/>
+    <GuideEntityEmbed Entity="TritiumCanister" Caption=""/>
+    <GuideEntityEmbed Entity="WaterVaporCanister" Caption=""/>
+    <GuideEntityEmbed Entity="AmmoniaCanister" Caption=""/>
+    <GuideEntityEmbed Entity="NitrousOxideCanister" Caption=""/>
+  </Box>
+
+  Experimente diferentes misturas de gases e veja o que acontece!
+</Document>

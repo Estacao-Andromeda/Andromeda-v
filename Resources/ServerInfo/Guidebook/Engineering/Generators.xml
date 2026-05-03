@@ -19,6 +19,7 @@
 	  <GuideEntityEmbed Entity="NuclearReactorNormal" Caption=""/>
 	  <GuideEntityEmbed Entity="Turbine" Caption=""/>
   </Box>
+
   <Box>
     ## Nuclear Generator
   </Box>
@@ -83,4 +84,14 @@
   <Box>
     [color=#999999][italic]Zero-maintenance passive power source[italic][/color]
   </Box>
+
+    <Box>
+      ##SuperMatter
+    </Box>
+    <Box>
+      <GuideEntityEmbed Entity="Supermatter" Caption=""/>
+    </Box>
+    <Box>
+      [color=#999999][italic]A powerful and dangerous energy source that requires careful handling and management[italic][/color]
+    </Box>
 </Document>

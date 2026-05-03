@@ -1,9 +1,21 @@
+// SPDX-FileCopyrightText: 2022 Alex Evgrashin <aevgrashin@yandex.ru>
+// SPDX-FileCopyrightText: 2023 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 LordCarve <27449516+LordCarve@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Tay <td12233a@gmail.com>
+// SPDX-FileCopyrightText: 2025 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 taydeo <td12233a@gmail.com>
+//
+// SPDX-License-Identifier: MIT
+
+using System.Linq;
 using Content.Server.Administration;
 using Content.Server.Radiation.Components;
 using Content.Shared.Administration;
 using Content.Shared.Radiation.Events;
 using Content.Shared.Radiation.Systems;
 using Robust.Shared.Console;
+using Robust.Shared.Debugging;
 using Robust.Shared.Enums;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Player;
@@ -87,18 +99,19 @@ public partial class RadiationSystem
 ///     Toggle visibility of radiation rays coming from rad sources.
 /// </summary>
 [AdminCommand(AdminFlags.Admin)]
-public sealed class RadiationViewCommand : LocalizedEntityCommands
+public sealed class RadiationViewCommand : IConsoleCommand
 {
-    [Dependency] private readonly RadiationSystem _radiation = default!;
+    public string Command => "showradiation";
+    public string Description => Loc.GetString("radiation-command-description");
+    public string Help => Loc.GetString("radiation-command-help");
 
-    public override string Command => "showradiation";
-
-    public override void Execute(IConsoleShell shell, string argStr, string[] args)
+    public void Execute(IConsoleShell shell, string argStr, string[] args)
     {
         var session = shell.Player;
         if (session == null)
             return;
 
-        _radiation.ToggleDebugView(session);
+        var entityManager = IoCManager.Resolve<IEntityManager>();
+        entityManager.System<RadiationSystem>().ToggleDebugView(session);
     }
 }
