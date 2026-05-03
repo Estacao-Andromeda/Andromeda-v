@@ -1,0 +1,130 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+                Title="Canvas"
+                Resizable="True"
+                SetSize="900 700"
+                MinSize="800 600">
+    <PanelContainer>
+        <PanelContainer.PanelOverride>
+            <gfx:StyleBoxFlat BackgroundColor="#14181f" BorderColor="#5f7b99" BorderThickness="2" />
+        </PanelContainer.PanelOverride>
+
+        <BoxContainer Orientation="Vertical" Margin="6">
+            <PanelContainer Name="HeaderPanel" MinSize="0 88">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#243445" BorderColor="#8fa7be" BorderThickness="1" />
+                </PanelContainer.PanelOverride>
+
+                <BoxContainer Orientation="Vertical" Margin="10 8 10 8">
+                    <Label Text="{Loc 'canvas-paintcode-label'}" />
+                    <BoxContainer Orientation="Horizontal" Align="Center" HorizontalExpand="True" Margin="0 4 0 0">
+                        <BoxContainer Orientation="Horizontal" Align="Center" Margin="0 0 10 0">
+                            <Label Text="{Loc 'canvas-color-preview'}: " />
+                            <Button Name="ColorPreview" MinSize="36 24" MaxSize="36 24" />
+                        </BoxContainer>
+
+                        <LineEdit Name="PaintCodeInput" PlaceHolder="{Loc 'canvas-paintcode'}" HorizontalExpand="True" MinSize="220 0" />
+
+                        <Button Name="ImportButton" Text="{Loc 'canvas-finalize-import'}" MinSize="120 0" Margin="10 0 6 0" />
+                        <Button Name="ExportButton" Text="{Loc 'canvas-export'}" MinSize="90 0" Margin="0 0 6 0" />
+                        <Button Name="FinalizeButton" Text="{Loc 'canvas-finalize'}" MinSize="90 0" />
+                    </BoxContainer>
+                </BoxContainer>
+            </PanelContainer>
+
+            <Control MinSize="0 6" />
+
+            <BoxContainer Orientation="Horizontal" VerticalExpand="True" HorizontalExpand="True">
+                <PanelContainer Name="LeftPanel" MinSize="340 0">
+                    <PanelContainer.PanelOverride>
+                        <gfx:StyleBoxFlat BackgroundColor="#202a35" BorderColor="#6f879d" BorderThickness="1" />
+                    </PanelContainer.PanelOverride>
+
+                    <ScrollContainer VerticalExpand="True" HorizontalExpand="True">
+                        <BoxContainer Orientation="Vertical" Margin="10" SeparationOverride="8">
+                            <PanelContainer>
+                                <PanelContainer.PanelOverride>
+                                    <gfx:StyleBoxFlat BackgroundColor="#2b3a4a" BorderColor="#7a91a7" BorderThickness="1" />
+                                </PanelContainer.PanelOverride>
+                                <BoxContainer Orientation="Vertical" Margin="8">
+                                    <Label Text="{Loc 'canvas-resolution'}" />
+                                    <BoxContainer Orientation="Horizontal" Margin="0 6 0 0">
+                                        <Label Text="{Loc 'canvas-height'}: " MinSize="58 0"/>
+                                        <Slider Name="HeightSize"
+                                                MinValue="16"
+                                                MaxValue="128"
+                                                HorizontalExpand="True"
+                                                MinSize="180 0"
+                                                Rounded="True" />
+                                        <Label Name="HeightSizeLabel" Text="16" MinSize="38 0"/>
+                                    </BoxContainer>
+                                    <BoxContainer Orientation="Horizontal" Margin="0 6 0 0">
+                                        <Label Text="{Loc 'canvas-width'}: " MinSize="58 0"/>
+                                        <Slider Name="WidthSize"
+                                                MinValue="16"
+                                                MaxValue="128"
+                                                HorizontalExpand="True"
+                                                MinSize="180 0"
+                                                Rounded="True" />
+                                        <Label Name="WidthSizeLabel" Text="16" MinSize="38 0"/>
+                                    </BoxContainer>
+                                </BoxContainer>
+                            </PanelContainer>
+
+                            <PanelContainer>
+                                <PanelContainer.PanelOverride>
+                                    <gfx:StyleBoxFlat BackgroundColor="#2b3a4a" BorderColor="#7a91a7" BorderThickness="1" />
+                                </PanelContainer.PanelOverride>
+                                <BoxContainer Orientation="Vertical" Margin="8">
+                                    <Label Text="{Loc 'canvas-artist-signature'}" />
+                                    <LineEdit Name="ArtistSignature" PlaceHolder="{Loc 'canvas-signature'}" HorizontalExpand="True" Margin="0 5 0 0" />
+                                </BoxContainer>
+                            </PanelContainer>
+
+                            <PanelContainer>
+                                <PanelContainer.PanelOverride>
+                                    <gfx:StyleBoxFlat BackgroundColor="#2b3a4a" BorderColor="#7a91a7" BorderThickness="1" />
+                                </PanelContainer.PanelOverride>
+                                <BoxContainer Orientation="Vertical" Margin="8">
+                                    <Label Text="{Loc 'canvas-color-controls'}" />
+                                    <ColorSelectorSliders Name="ColorSelector" Margin="0 6 0 0" />
+                                    <BoxContainer Name="ColorSelectorBox" Orientation="Horizontal" Align="Center" Margin="0 8 0 0" />
+                                    <Button Name="EraserButton" Text="{Loc 'canvas-eraser'}" HorizontalExpand="True" MinSize="0 30" Margin="0 8 0 0" />
+                                </BoxContainer>
+                            </PanelContainer>
+                        </BoxContainer>
+                    </ScrollContainer>
+                </PanelContainer>
+
+                <Control MinSize="6 0" />
+
+                <PanelContainer VerticalExpand="True" HorizontalExpand="True">
+                    <PanelContainer.PanelOverride>
+                        <gfx:StyleBoxFlat BackgroundColor="#1a222d" BorderColor="#7189a0" BorderThickness="1" />
+                    </PanelContainer.PanelOverride>
+
+                    <Control VerticalExpand="True" HorizontalExpand="True" Margin="10">
+                        <PanelContainer VerticalExpand="True" HorizontalExpand="True">
+                            <PanelContainer.PanelOverride>
+                                <gfx:StyleBoxFlat BackgroundColor="#0f131a" BorderColor="#4e647a" BorderThickness="2" />
+                            </PanelContainer.PanelOverride>
+
+                            <BoxContainer Name="Grids" Orientation="Vertical" Align="Center" VerticalExpand="True" HorizontalExpand="True" Margin="8">
+                            </BoxContainer>
+                        </PanelContainer>
+                    </Control>
+                </PanelContainer>
+            </BoxContainer>
+
+            <Control MinSize="0 6" />
+
+            <PanelContainer>
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#243445" BorderColor="#8fa7be" BorderThickness="1" />
+                </PanelContainer.PanelOverride>
+                <Label Name="StatusLabel" Text="{Loc 'canvas-ready'}" Margin="8 4 8 4" />
+            </PanelContainer>
+        </BoxContainer>
+    </PanelContainer>
+</controls:FancyWindow>

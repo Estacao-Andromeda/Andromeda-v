@@ -1,0 +1,1 @@
+deltav-ghost-role-information-salvageantag-rules =  Você é uma multidão de resgate, pode atacar os salvadores sem provocação, não dê seus corps, você pode atacar o ônibus de resgate, você não pode ir para a estação, se os salvadores forem para a estação, você não pode segui-los.

@@ -145,7 +145,7 @@ namespace Content.Server.Psionics.Glimmer
             if (component.RequiresApcPower && !HasComp<ApcPowerReceiverComponent>(uid))
                 Logger.Warning($"{ToPrettyString(uid)} had RequiresApcPower set to true but no ApcPowerReceiverComponent was found on init.");
 
-            UpdateEntityState(uid, component, LastGlimmerTier, (int) LastGlimmerTier);
+            UpdateEntityState(uid, component, LastGlimmerTier, (int)LastGlimmerTier);
         }
 
         /// <summary>
@@ -155,7 +155,7 @@ namespace Content.Server.Psionics.Glimmer
         /// </summary>
         private void OnComponentRemove(EntityUid uid, SharedGlimmerReactiveComponent component, ComponentRemove args)
         {
-            UpdateEntityState(uid, component, GlimmerTier.Minimal, -1 * (int) LastGlimmerTier);
+            UpdateEntityState(uid, component, GlimmerTier.Minimal, -1 * (int)LastGlimmerTier);
         }
 
         /// <summary>
@@ -170,7 +170,7 @@ namespace Content.Server.Psionics.Glimmer
 
         private void AddShockVerb(EntityUid uid, SharedGlimmerReactiveComponent component, GetVerbsEvent<AlternativeVerb> args)
         {
-            if(!args.CanAccess || !args.CanInteract)
+            if (!args.CanAccess || !args.CanInteract)
                 return;
 
             if (!TryComp<ApcPowerReceiverComponent>(uid, out var receiver))
@@ -184,9 +184,9 @@ namespace Content.Server.Psionics.Glimmer
                 Act = () =>
                 {
                     _sharedAudioSystem.PlayPvs(component.ShockNoises, args.User);
-                    _electrocutionSystem.TryDoElectrocution(args.User, null, _glimmerSystem.Glimmer / 200, TimeSpan.FromSeconds((float) _glimmerSystem.Glimmer / 100), false);
+                    _electrocutionSystem.TryDoElectrocution(args.User, null, _glimmerSystem.Glimmer / 200, TimeSpan.FromSeconds((float)_glimmerSystem.Glimmer / 100), false);
                 },
-                Icon = new SpriteSpecifier.Texture(new ("/Textures/Interface/VerbIcons/Spare/poweronoff.svg.192dpi.png")),
+                Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/Spare/poweronoff.svg.192dpi.png")),
                 Text = Loc.GetString("power-switch-component-toggle-verb"),
                 Priority = -3
             };
@@ -198,7 +198,7 @@ namespace Content.Server.Psionics.Glimmer
             if (args.Origin == null)
                 return;
 
-            if (!_random.Prob((float) _glimmerSystem.Glimmer / 1000))
+            if (!_random.Prob((float)_glimmerSystem.Glimmer / 1000))
                 return;
 
             var tier = _glimmerSystem.GetGlimmerTier();
@@ -212,15 +212,15 @@ namespace Content.Server.Psionics.Glimmer
             Spawn("MaterialBluespace1", Transform(uid).Coordinates);
 
             var tier = _glimmerSystem.GetGlimmerTier();
-            if (tier < GlimmerTier.High)
+            if (tier < GlimmerTier.Dangerous) // Andromeda
                 return;
 
-            var totalIntensity = (float) (_glimmerSystem.Glimmer * 2);
-            var slope = (float) (11 - _glimmerSystem.Glimmer / 100);
+            var totalIntensity = (float)(_glimmerSystem.Glimmer * 2);
+            var slope = (float)(11 - _glimmerSystem.Glimmer / 100);
             var maxIntensity = 20;
 
-            var removed = (float) _glimmerSystem.Glimmer * _random.NextFloat(0.06f, 0.08f);
-            _glimmerSystem.Glimmer -= (int) removed;
+            var removed = (float)_glimmerSystem.Glimmer * _random.NextFloat(0.06f, 0.08f);
+            _glimmerSystem.Glimmer -= (int)removed;
             BeamRandomNearProber(uid, _glimmerSystem.Glimmer / 350, _glimmerSystem.Glimmer / 50);
             _explosionSystem.QueueExplosion(uid, "Default", totalIntensity, slope, maxIntensity);
         }
@@ -230,7 +230,7 @@ namespace Content.Server.Psionics.Glimmer
             if (component.Locked)
             {
                 _sharedAudioSystem.PlayPvs(component.ShockNoises, args.User);
-                _electrocutionSystem.TryDoElectrocution(args.User, null, _glimmerSystem.Glimmer / 200, TimeSpan.FromSeconds((float) _glimmerSystem.Glimmer / 100), false);
+                _electrocutionSystem.TryDoElectrocution(args.User, null, _glimmerSystem.Glimmer / 200, TimeSpan.FromSeconds((float)_glimmerSystem.Glimmer / 100), false);
                 args.Cancel();
             }
         }
@@ -253,7 +253,7 @@ namespace Content.Server.Psionics.Glimmer
                     targetList.Add(target);
             }
 
-            foreach(var reactive in _entityLookupSystem.GetEntitiesInRange<SharedGlimmerReactiveComponent>(coords, range))
+            foreach (var reactive in _entityLookupSystem.GetEntitiesInRange<SharedGlimmerReactiveComponent>(coords, range))
             {
                 targetList.Add(reactive);
             }
@@ -282,7 +282,7 @@ namespace Content.Server.Psionics.Glimmer
 
             if (!lxform.Coordinates.TryDistance(EntityManager, txform.Coordinates, out var distance))
                 return;
-            if (distance > (float) (_glimmerSystem.Glimmer / 100))
+            if (distance > (float)(_glimmerSystem.Glimmer / 100))
                 return;
 
             string beamproto;
@@ -362,7 +362,7 @@ namespace Content.Server.Psionics.Glimmer
             _lightning.ShootRandomLightnings(uid, 10, 2, "SuperchargedLightning", 2, false);
 
             // Check if the parent of the user is alive, which will be the case if the user is an item and is being held.
-            if (args.User is {} user && HasComp<MindContainerComponent>(args.User))
+            if (args.User is { } user && HasComp<MindContainerComponent>(args.User))
                 _electrocutionSystem.TryDoElectrocution(user, uid, 5, TimeSpan.FromSeconds(3), true,
                     ignoreInsulation: true);
         }
@@ -390,8 +390,9 @@ namespace Content.Server.Psionics.Glimmer
                 var currentGlimmerTier = _glimmerSystem.GetGlimmerTier();
 
                 var reactives = EntityQuery<SharedGlimmerReactiveComponent>();
-                if (currentGlimmerTier != LastGlimmerTier) {
-                    var glimmerTierDelta = (int) currentGlimmerTier - (int) LastGlimmerTier;
+                if (currentGlimmerTier != LastGlimmerTier)
+                {
+                    var glimmerTierDelta = (int)currentGlimmerTier - (int)LastGlimmerTier;
                     var ev = new GlimmerTierChangedEvent(LastGlimmerTier, currentGlimmerTier, glimmerTierDelta);
 
                     foreach (var reactive in reactives)
@@ -411,7 +412,8 @@ namespace Content.Server.Psionics.Glimmer
                     {
                         BeamRandomNearProber(reactive.Owner, 1, 12);
                     }
-                } else if (GhostsVisible == true)
+                }
+                else if (GhostsVisible == true)
                 {
                     _ghostSystem.MakeVisible(false);
                     _revenantSystem.MakeVisible(false);

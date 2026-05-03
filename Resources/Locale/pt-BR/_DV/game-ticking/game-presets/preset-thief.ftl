@@ -1,0 +1,1 @@
+thief-role-greeting-human-deltav =  Você é um criminoso, um cleptomaníaco preso e em condicional por furto, precisa adicionar mais à sua coleção, conseguir sua solução por qualquer meio necessário, roubar todas as coisas!

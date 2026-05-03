@@ -1,18 +1,56 @@
-<ui:FancyWindow xmlns="https://spacestation14.io" xmlns:ui="clr-namespace:Content.Client.UserInterface.Controls"
-                SetSize="400 500" Title="{Loc 'jukebox-menu-title'}">
-    <BoxContainer Margin="4 0" Orientation="Vertical">
-        <ItemList Name="MusicList" SelectMode="Button" Margin="3 3 3 3"
-        HorizontalExpand="True" VerticalExpand="True" SizeFlagsStretchRatio="8"/>
-        <BoxContainer Orientation="Vertical">
-            <Label Name="SongSelected" Text="{Loc 'jukebox-menu-selectedsong'}" />
-            <Label Name="SongName" Text="---" />
-            <Slider Name="PlaybackSlider" HorizontalExpand="True" />
+<ui:FancyWindow xmlns="https://spacestation14.io"
+                xmlns:ui="clr-namespace:Content.Client.UserInterface.Controls"
+                xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+                SetSize="640 560"
+                Title="{Loc 'jukebox-menu-title'}">
+    <PanelContainer Margin="6 6 6 6">
+        <PanelContainer.PanelOverride>
+            <gfx:StyleBoxFlat BackgroundColor="#1B2330" BorderColor="#4E657D" BorderThickness="2" />
+        </PanelContainer.PanelOverride>
+
+        <BoxContainer Margin="8 8 8 8" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True">
+            <Label Text="{Loc 'jukebox-menu-title'}" HorizontalAlignment="Center" Margin="0 0 0 4" />
+            <PanelContainer StyleClasses="LowDivider" HorizontalExpand="True" />
+
+            <PanelContainer Margin="0 6 0 0" VerticalExpand="True" HorizontalExpand="True">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#121923" BorderColor="#3A4A5F" BorderThickness="1" />
+                </PanelContainer.PanelOverride>
+
+                <BoxContainer Margin="8 8 8 8" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True">
+                    <BoxContainer Orientation="Horizontal" HorizontalExpand="True" Margin="0 0 0 6">
+                        <LineEdit Name="SearchLineEdit" PlaceHolder="Search songs..." HorizontalExpand="True" />
+                        <Button Name="ClearSearchButton" Text="Clear" Margin="6 0 0 0" />
+                    </BoxContainer>
+
+                    <ItemList Name="MusicList"
+                              SelectMode="Button"
+                              HorizontalExpand="True"
+                              VerticalExpand="True"
+                              SizeFlagsStretchRatio="8"
+                              Margin="0 0 0 8" />
+
+                    <Label Name="SongSelected" Text="{Loc 'jukebox-menu-selectedsong'}" />
+                    <BoxContainer Orientation="Horizontal" HorizontalExpand="True" Margin="0 2 0 0">
+                        <Label Name="SongName" Text="---" HorizontalExpand="True" ClipText="True" />
+                        <Label Name="DurationLabel" Text="00:00 / 00:00" HorizontalAlignment="Right" />
+                    </BoxContainer>
+
+                    <Slider Name="PlaybackSlider" HorizontalExpand="True" Margin="0 4 0 4" />
+
+                    <BoxContainer Orientation="Horizontal" HorizontalExpand="True" VerticalAlignment="Center">
+                        <Label Name="VolumeLabel" Text="{Loc 'jukebox-menu-volume'} " />
+                        <Slider Name="VolumeSlider" HorizontalExpand="True" />
+                        <Label Name="VolumeNumberLabel" Text="0" MinWidth="52" HorizontalAlignment="Right" Margin="6 0 0 0" />
+                    </BoxContainer>
+                </BoxContainer>
+            </PanelContainer>
+
+            <PanelContainer StyleClasses="LowDivider" HorizontalExpand="True" Margin="0 8 0 8" />
+            <BoxContainer Orientation="Horizontal" HorizontalAlignment="Center" HorizontalExpand="True">
+                <Button Name="PlayButton" Text="{Loc 'jukebox-menu-buttonplay'}" MinWidth="130" />
+                <Button Name="StopButton" Text="{Loc 'jukebox-menu-buttonstop'}" MinWidth="130" Margin="8 0 0 0" />
+            </BoxContainer>
         </BoxContainer>
-        <BoxContainer Orientation="Horizontal" HorizontalExpand="True"
-        VerticalExpand="False" SizeFlagsStretchRatio="1">
-            <Button Name="PlayButton" Text="{Loc 'jukebox-menu-buttonplay'}" />
-            <Button Name="StopButton" Text="{Loc 'jukebox-menu-buttonstop'}" />
-            <Label Name="DurationLabel" Text="00:00 / 00:00" HorizontalAlignment="Right" HorizontalExpand="True"/>
-        </BoxContainer>
-    </BoxContainer>
+    </PanelContainer>
 </ui:FancyWindow>
