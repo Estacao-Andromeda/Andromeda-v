@@ -5,8 +5,8 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Omu, replace Goobcoin with Eggs
-server-currency-name-singular = Eggs
-server-currency-name-plural = Eggs
+server-currency-name-singular = Stars
+server-currency-name-plural = Stars
 
 ## Commands
 
