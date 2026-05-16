@@ -8,21 +8,21 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-- type: tokenListing
-  id: HighTierAntagToken
-  name: gs-balanceui-shop-buy-token-antag
-  label: gs-balanceui-shop-token-antag
-  description: gs-balanceui-shop-buy-token-antag-desc
-  price: 3000
-  adminNote: gs-balanceui-remark-token-antag
-
-- type: tokenListing
-  id: AdminAbuseToken
-  name: gs-balanceui-shop-buy-token-admin-abuse
-  label: gs-balanceui-shop-token-admin-abuse
-  description: gs-balanceui-shop-buy-token-admin-abuse-desc
-  price: 1000
-  adminNote: gs-balanceui-remark-token-admin-abuse
+#- type: tokenListing # Andromeda - Nahhh
+#  id: HighTierAntagToken
+#  name: gs-balanceui-shop-buy-token-antag
+#  label: gs-balanceui-shop-token-antag
+#  description: gs-balanceui-shop-buy-token-antag-desc
+#  price: 3000
+#  adminNote: gs-balanceui-remark-token-antag
+#
+#- type: tokenListing
+#  id: AdminAbuseToken
+#  name: gs-balanceui-shop-buy-token-admin-abuse
+#  label: gs-balanceui-shop-token-admin-abuse
+#  description: gs-balanceui-shop-buy-token-admin-abuse-desc
+#  price: 1000
+#  adminNote: gs-balanceui-remark-token-admin-abuse
 
 - type: tokenListing
   id: HatToken

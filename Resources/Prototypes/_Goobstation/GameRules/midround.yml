@@ -448,7 +448,7 @@
     weight: 3
     duration: null
     earliestStart: 30
-    minimumPlayers: 30
+    minimumPlayers: 40
     chaos:
       Hostile: 40
       Combat: 40
